@@ -1,0 +1,54 @@
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chapter 7 Project</title>
+</head>
+
+<body>
+    <script>
+        class employees{
+          
+            constructor(firstname,lastname,howManyYearsEmployed){
+                this.firstname = firstname;
+                this.lastname = lastname;
+                this.howManyYearsEmployed = howManyYearsEmployed;
+            }
+        }    
+        let p1 = new employees("John","Mac P",10);
+        let p2 = new employees("Wamzie","Nyembe",2);
+        let arr = [p1,p2];
+        employees.prototype.details = function (){
+            return  this.firstname + " " + this.lastname + " has worked here " + this.howManyYearsEmployed  +" years";
+        }   
+        
+        arr.forEach((p)=>{
+            console.log(p.details());
+        });
+      
+        // class Menu {
+        //     #offer1 = 10;
+        //     #offer2 = 20;
+        //     constructor(val1, val2) {
+        //         this.val1 = val1;
+        //         this.val2 = val2;
+        //     }
+        //     total() {
+        //         return (this.val1 * this.#offer1) + (this.val2 * this.#offer2);
+
+        //     }
+        //     get total() {
+        //         return this.calTotal();
+        //     }
+        // }
+        // let val1 = new Menu(2, 0);
+        // let val2 = new Menu (7,7)
+        // console.log(val1.total);
+        // console.log(val2.total);
+       
+    </script>
+</body>
+
+</html>

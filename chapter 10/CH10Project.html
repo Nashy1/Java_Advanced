@@ -1,0 +1,116 @@
+<!doctype html>
+<html>
+
+<head>
+    <title>JS Tester</title>
+    <style>
+        .active {
+            display: block !important;
+        }
+
+        .myText {
+            display: none;
+        }
+
+        .title {
+            font-size: 1.5em;
+            background-color: #d7a7a7;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <div class="title">Title #1</div>
+        <div class="myText">Just some text #1</div>
+        <div class="title">Title #2</div>
+        <div class="myText">Just some text #2</div>
+        <div class="title">Title #3</div>
+        <div class="myText">Just some text #3</div>
+    </div>
+    <script>
+        let title = document.querySelectorAll('.title');
+        let myText = document.querySelectorAll('.myText');
+        let container = document.querySelector(".container");
+     
+        title.forEach((el)=>{
+            el.addEventListener("click",(e)=>{
+                console.log(el.nextElementSelectorAll);
+                remover();
+                el.nextElementSibling.classList.toggle("active");
+            })
+        })
+        let remover= ()=>{
+            myText.forEach((ele)=>{
+                ele.classList.remove("active");
+            })
+        }
+    </script>
+</body>
+
+</html>
+
+
+
+
+
+
+
+
+<!-- <!DOCTYPE html>
+<html>
+
+<head>
+    <title>Complete JavaScript Course</title>
+</head>
+
+<body>
+    <div id="message">Complete JavaScript Course</div>
+    <div>
+        <input type="text" id="addFriend">
+        <input type="button" id="addNew" value="Add Friend" >
+    </div>
+    <table id="output"></table>
+    <script>
+       window.onload = build;
+        let arr = ["Nash","Mark","Zake"];
+        let message = document.getElementById("message");
+        let addFriend = document.getElementById("addFriend");
+        let output = document.getElementById("output");
+        const addnew = document.getElementById("addNew");
+        addnew.onclick = function(){
+            let newFriend = addFriend.value;
+            adder(newFriend,arr.length,0);
+            arr.push(newFriend);
+        }
+        function build(){
+            arr.forEach((item,index)=>{
+                adder(item,index,0);
+            });
+        }
+        function adder  (name,index,counter){
+            let tr = document.createElement("tr");
+            let td1 = document.createElement("td");
+            td1.classList.add("box");
+            td1.textContent = index + 1;
+            let td2 = document.createElement("td");
+            td2.textContent =name;
+            let td3 = document.createElement("td");
+            td3.textContent = counter;
+            tr.append(td1);
+            tr.append(td2);
+            tr.append(td3);
+            tr.onclick =()=>{
+                console.log(tr.lastChild);
+                let val =Number(tr.lastChild.textContent);
+                val++;
+                tr.lastChild.textContent =val;
+
+            }
+            output.appendChild(tr);
+        }
+        
+    </script>
+</body>
+
+</html> -->

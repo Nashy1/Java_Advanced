@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Online paint app</title>
+    <link rel="stylesheet" href="paintapp.css">
+</head>
+
+<body>
+    <canvas id="canvas" width="600" height="400"></canvas>
+    <div>
+        <button class="save">Save</button>
+        <button class="clear">clear</button>
+        <span>Color: <input type="color" value="#ffff00" id="penColor"></span>
+        <span>Width: <input type="range" min="1" max="20" value="10" id="penWidth"></span>
+    </div>
+    <div class="output"></div>
+    <script src="paintapp.js"></script>
+</body>
+
+</html>

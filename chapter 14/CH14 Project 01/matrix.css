@@ -1,0 +1,25 @@
+body{
+    background-color: rgb(11, 11, 11);
+}
+
+#canvas{
+    /* background-color: black; */
+    width: 100%;
+    height: 200px;
+    background: linear-gradient(to bottom right, red, yellow);
+  
+}
+#canvas2{
+    /* background-color: black; */
+    width: 100%;
+    height: 200px;
+    background: linear-gradient(to bottom right, red, yellow);
+  
+}
+#canvas3{
+    /* background-color: black; */
+    width: 100%;
+    height: 200px;
+    background: linear-gradient(to bottom right, red, yellow);
+  
+}

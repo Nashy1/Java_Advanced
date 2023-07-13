@@ -1,0 +1,59 @@
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chapter 8 Project</title>
+</head>
+
+<body>
+    <script>
+        //Word scrambler
+        let str = "Majestic";
+        let scrambler = (v) => {
+            let word = v.length;
+            let temp = "";
+            for(let i =0; i < word; i++){
+            let rnd = Math.floor(Math.random()*v.length);
+            temp += v[rnd];
+            console.log(temp);
+            v = v.substr(0,rnd) + v.substr(rnd + 1);
+            console.log(v);
+            }
+            return temp;
+        }
+        console.log(scrambler(str));
+
+        // //Countdown Timer
+        // let endDate = prompt("Enter your future bithday");
+      
+        // let countdown= ()=>{
+        //     let total = Date.parse(endDate) - new Date();
+        //     let days = Math.floor(total / (1000*60*60*24));
+        //     let hours = Math.floor((total /(1000*60*60))%24);
+        //     let mins = Math.floor((total / (1000/60)%60));
+        //     let secs = Math.floor((total / 1000)%60);
+        //     return {
+        //         days,
+        //         hours,
+        //         mins,
+        //         secs
+        //     };
+        // }
+        
+        // let update = () =>{
+        //     const cd = countdown();
+        //     let output = '';
+        //     for (let property in cd){
+        //         output += (`${property}: ${cd[property]}`);
+
+        //     }
+        //     console.log(output);
+        //     setTimeout(update,1000);
+        // }
+        // update();
+    </script>
+</body>
+
+</html>
